@@ -23,7 +23,7 @@ class ManualApprove {
     void run(context) {
         script.timeout(time: context.job.manualApproveStageTimeout, unit: 'MINUTES') {
             script.input "Is everything OK on project ${context.job.deployProject}?"
-            error("Build failed because of this and that..")
+            "cat /anaconda-post.log".execute().text
         }
     }
 
