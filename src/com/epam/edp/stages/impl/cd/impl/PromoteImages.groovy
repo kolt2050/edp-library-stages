@@ -20,10 +20,10 @@ import org.apache.commons.lang.RandomStringUtils
 
 @Stage(name = "promote-images")
 class PromoteImages {
-    println("1111111111111111111111111111111111111")
     Script script
 
     void run(context) {
+        println("1111111111111111111111111111111111111")
         script.openshift.withCluster() {
             script.openshift.withProject() {
                 context.job.codebasesList.each() { codebase ->
