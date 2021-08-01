@@ -20,6 +20,7 @@ import org.apache.commons.lang.RandomStringUtils
 
 @Stage(name = "promote-images")
 class PromoteImages {
+    println("1111111111111111111111111111111111111")
     Script script
 
     void run(context) {
@@ -42,7 +43,7 @@ class PromoteImages {
                                 .UpdateOrCreateCodebaseImageStream(codebase.outputIs, "${dockerRegistryHost}/${codebase.outputIs}", codebase.version)
 
                         script.println("[JENKINS][INFO] Image ${codebase.inputIs}:${codebase.version} has been promoted to ${codebase.outputIs}")
-                        println("1111111111111111111111111111111111111")
+
                     }
                 }
             }
