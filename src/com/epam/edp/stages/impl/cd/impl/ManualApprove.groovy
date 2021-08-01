@@ -23,7 +23,6 @@ class ManualApprove {
     void run(context) {
         script.timeout(time: context.job.manualApproveStageTimeout, unit: 'MINUTES') {
             script.input "Is everything OK on project ${context.job.deployProject}?"
-            "cat /anaconda-post.log".execute().text
         }
     }
 

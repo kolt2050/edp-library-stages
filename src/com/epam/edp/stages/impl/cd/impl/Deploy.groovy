@@ -361,6 +361,7 @@ class Deploy {
         deployServices(context)
 
         def deployCodebasesList = context.job.codebasesList.clone()
+        println("-----------end deploy----------")
         while (!deployCodebasesList.isEmpty()) {
             def parallelCodebases = [:]
             def tempAppList = getNElements(deployCodebasesList, context.job.maxOfParallelDeployApps)
@@ -399,5 +400,6 @@ class Deploy {
             script.parallel parallelCodebases
         }
     }
+
 
 }
