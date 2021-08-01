@@ -287,6 +287,7 @@ class Deploy {
 
     void deployServices(context) {
         script.println("[JENKINS][DEBUG] Start service deploying.")
+        script.println("333333333333333333333333333333333333")
 
         def chartmuseumUrl = context.job.getParameterValue("CHARTMUSEUM_URL", "https://chartmuseum.demo.edp-epam.com")
         script.sh("helm repo add epamedp ${chartmuseumUrl}")
@@ -398,5 +399,5 @@ class Deploy {
             script.parallel parallelCodebases
         }
     }
-    println("33333333333333333333333333333333333")
+
 }
