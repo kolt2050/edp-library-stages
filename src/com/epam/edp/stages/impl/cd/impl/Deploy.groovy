@@ -312,7 +312,6 @@ class Deploy {
     }
 
     def getServiceHelmCommand(service, dnsWildcard, ns) {
-        echo1 111
         return [
                 'postgres': [
                         ['name': 'dbName', 'value': "${service.name}"],
@@ -362,6 +361,7 @@ class Deploy {
         deployServices(context)
 
         def deployCodebasesList = context.job.codebasesList.clone()
+        echo1 111
         println("-----------end deploy----------")
         while (!deployCodebasesList.isEmpty()) {
             def parallelCodebases = [:]
