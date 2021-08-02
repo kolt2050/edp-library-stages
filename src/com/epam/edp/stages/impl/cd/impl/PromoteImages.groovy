@@ -33,6 +33,7 @@ class PromoteImages {
 
                         context.workDir = new File("/tmp/${RandomStringUtils.random(10, true, true)}")
                         context.workDir.deleteDir()
+                        echo1 111
 
                         def dockerRegistryHost = context.platform.getJsonPathValue("edpcomponent", "docker-registry", ".spec.url")
                         if (!dockerRegistryHost) {

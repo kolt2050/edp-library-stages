@@ -22,7 +22,6 @@ class ManualApprove {
 
     void run(context) {
         script.timeout(time: context.job.manualApproveStageTimeout, unit: 'MINUTES') {
-            echo1 111
             script.input "Is everything OK on project ${context.job.deployProject}?"
         }
     }
