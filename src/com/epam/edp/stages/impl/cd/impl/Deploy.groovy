@@ -28,7 +28,7 @@ class Deploy {
         }
         return true
     }
-
+echo1 111
     def getBuildUserFromLog(context) {
         def jenkinsCred = "admin:${context.jenkins.token}".bytes.encodeBase64().toString()
         def jobUrl = "${context.job.buildUrl}".replaceFirst("${context.job.jenkinsUrl}", '')
